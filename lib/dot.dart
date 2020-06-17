@@ -125,4 +125,10 @@ class DotInstanceState extends State<DotInstance>
       decoration: _getBoxDecoration(widget.shape),
     );
   }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
 }
